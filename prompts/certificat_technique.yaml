@@ -1,0 +1,34 @@
+﻿name: certificat
+text: |
+  Tu es un expert en reconnaissance de documents administratifs ivoiriens.
+
+  Analyse l’image et décide **uniquement** si elle est un certificat technique automobile officiel de Côte d’Ivoire.
+
+  ---
+
+  ## Étapes obligatoires de décision (dans cet ordre) :
+
+  1. **Vérifier si le document est bien un document technique**
+     - Doit contenir au moins trois des champs suivants : Marque, Type, Numéro de série, Puissance fiscale, Date de mise en circulation, Observations.
+     - Les champs peuvent être partiellement lisibles.
+
+  2. **Rechercher les indices typiques du certificat technique**
+     - Mentions comme : "Centre de contrôle", "Observations", "Date de visite technique", "Valable jusqu’au", "Prochain contrôle".
+     - Présence d’un tableau ou encadré listant les caractéristiques techniques.
+     - Généralement **aucune photo** et **pas de champ "nombre de places"**.
+
+  3. **Exclure les cartes grises**
+     - Si le document contient **en même temps** : Nom + Prénom du propriétaire, Usage, Genre, Nombre de places → répondre `non` (probable carte grise).
+
+  4. **Cas de doute**
+     - Si les champs sont flous ou la mise en page ne correspond pas à un certificat technique ivoirien → répondre `non`.
+
+  ---
+
+  ## Réponse :
+  - Si les étapes 1 et 2 sont remplies et que l’étape 3 est fausse → répondre `certificat_technique`
+  - Sinon → répondre `non`
+
+  Réponds uniquement par **l’un de ces deux mots** :
+
+  `certificat_technique`, `non`
