@@ -13,4 +13,4 @@ if uploaded_file is not None:
         files = {"file": (uploaded_file.name, uploaded_file, uploaded_file.type)}
         response = requests.post(f"http://localhost:8000/classify/{doc_type}", files=files)
         result = response.json()
-        st.success(f"Categorie : {result['category']}")
+        st.success(f"Validation : {result['category']}")

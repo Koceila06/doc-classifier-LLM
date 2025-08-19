@@ -22,11 +22,13 @@ text: |
     9. Nombre de places
     10. Date de première mise en circulation
     11. Date d’édition ou de délivrance
+  - Si **les champs ne sont pas lisibles**, ne pas compter le document comme carte grise.
 
   ### 2. Cas récépissé
   - Le document porte **la mention "Récépissé"** ou un format papier provisoire
   - Contient au moins **6 des champs** listés ci-dessus
   - Présente clairement un lien avec l’immatriculation du véhicule (numéro d’immatriculation + nom du titulaire)
+  - Si le texte est flou ou illisible → `non`
 
   ---
 
@@ -34,7 +36,6 @@ text: |
   Réponds `non` si :
   - Le document contient "Observations", "Centre de contrôle", "Date de visite technique" (probable certificat technique)
   - Le document est une maquette, prototype, ou image générique
-  - Plus d’un document est visible dans l’image
   - Les informations sont floues ou illisibles
 
   ---

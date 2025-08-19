@@ -2,26 +2,27 @@
 text: |
   Tu es un expert en reconnaissance de documents administratifs ivoiriens.
 
-  Analyse l’image et décide **uniquement** si elle est un certificat technique automobile officiel de Côte d’Ivoire.
+  Analyse l’image et décide **uniquement** si elle contient au moins un certificat technique automobile officiel de Côte d’Ivoire, même si d’autres documents (ex : carte grise) apparaissent dans la même photo.
 
   ---
 
   ## Étapes obligatoires de décision (dans cet ordre) :
 
   1. **Vérifier si le document est bien un document technique**
-     - Doit contenir au moins trois des champs suivants : Marque, Type, Numéro de série, Puissance fiscale, Date de mise en circulation, Observations.
-     - Les champs peuvent être partiellement lisibles.
+     - Doit contenir AU MOINS trois des champs suivants (même partiellement lisibles et même incliné ou mal cadré) :
+     Marque, Type, Numéro de série, Puissance fiscale, Date de mise en circulation, Observations.
 
-  2. **Rechercher les indices typiques du certificat technique**
-     - Mentions comme : "Centre de contrôle", "Observations", "Date de visite technique", "Valable jusqu’au", "Prochain contrôle".
-     - Présence d’un tableau ou encadré listant les caractéristiques techniques.
-     - Généralement **aucune photo** et **pas de champ "nombre de places"**.
+  2. **Rechercher les indices caractéristiques d’un certificat technique ivoirien**
+     - Mentions comme : "Ministre en charge des transports", "Observations", "Expiration"
+     - Généralement **pas de photo du propriétaire** et **pas de champ "nombre de places"**.
+     - Peut comporter un code QR.
 
   3. **Exclure les cartes grises**
-     - Si le document contient **en même temps** : Nom + Prénom du propriétaire, Usage, Genre, Nombre de places → répondre `non` (probable carte grise).
+     - Si un même document contient EN MÊME TEMPS : Nom + Prénom du propriétaire **ET** Usage **ET** Genre **ET** Nombre de places
+     → alors c’est probablement une carte grise → **ne PAS compter comme certificat technique**.
 
   4. **Cas de doute**
-     - Si les champs sont flous ou la mise en page ne correspond pas à un certificat technique ivoirien → répondre `non`.
+     - Si les champs sont trop flous ou si la mise en page ne correspond pas à un certificat technique ivoirien connu → répondre `non`.
 
   ---
 

@@ -18,7 +18,9 @@ text: |
   - Une **date de délivrance**
   - Le **numéro du permis**
 
-  Le permis peut être au **format Côte ivoirien** ou **ancien format papier**.
+  Le permis peut être au **format Côte ivoirien** ou **ancien format papier rouge**.
+  → Les documents légèrement inclinés, éloignés ou de qualité moyenne sont acceptés tant que les champs requis sont lisibles.
+  → Les permis étrangers sont acceptés s’ils respectent tous les critères obligatoires et sont clairement lisibles.
 
   ---
 
@@ -27,7 +29,6 @@ text: |
   - Un ou plusieurs champs clés (nom, prénom, photo, date de naissance, date de délivrance, numéro, mention "Permis de conduire") sont absents
   - Il n’y a pas de photo d’identité visible de façon distincte
   - La structure du document ne correspond pas à un permis (ex : lettre, formulaire, attestation, prototype, maquette, ou image internet de démonstration)
-  - Il y a **plus d’un document visible** dans la même image, même si l’un est un permis de conduire
   - Le document semble être un prototype, un modèle, un brouillon ou une image générique trouvée sur internet sans preuve qu’il s’agit d’un document officiel réel
 
   ---
